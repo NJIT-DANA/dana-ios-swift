@@ -17,6 +17,11 @@
 		59A3B46827AEDAFE00C751C5 /* DANATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B46727AEDAFE00C751C5 /* DANATests.swift */; };
 		59A3B47227AEDAFE00C751C5 /* DANAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B47127AEDAFE00C751C5 /* DANAUITests.swift */; };
 		59A3B47427AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B47327AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift */; };
+		59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B48A27AF01E700C751C5 /* AppConstants.swift */; };
+		59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B48C27AF0A7D00C751C5 /* NetworkManager.swift */; };
+		59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */; };
+		59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B49327AF1E1B00C751C5 /* Reachability.swift */; };
+		59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B49527AF256C00C751C5 /* DanaHelper.swift */; };
 		CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +58,11 @@
 		59A3B46D27AEDAFE00C751C5 /* DANAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B47127AEDAFE00C751C5 /* DANAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANAUITests.swift; sourceTree = "<group>"; };
 		59A3B47327AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59A3B48A27AF01E700C751C5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		59A3B48C27AF0A7D00C751C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationModel.swift; sourceTree = "<group>"; };
+		59A3B49327AF1E1B00C751C5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		59A3B49527AF256C00C751C5 /* DanaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanaHelper.swift; sourceTree = "<group>"; };
 		DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
 		E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +159,7 @@
 		59A3B48427AEE3FD00C751C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				59A3B45927AEDAFE00C751C5 /* Assets.xcassets */,
+				59A3B48A27AF01E700C751C5 /* AppConstants.swift */,
+				59A3B49527AF256C00C751C5 /* DanaHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,6 +193,8 @@
 		59A3B48827AEE58600C751C5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				59A3B48C27AF0A7D00C751C5 /* NetworkManager.swift */,
+				59A3B49327AF1E1B00C751C5 /* Reachability.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -385,10 +400,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */,
 				59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
 				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
+				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
+				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
 				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
+				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
+				59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P2KFTR3WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DANA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,6 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P2KFTR3WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DANA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -2,18 +2,26 @@
 //  ViewController.swift
 //  DANA
 //
-//  Created by Littman Library on 2/5/22.
+//  Created by Rini Joseph on 2/5/22.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    let currentNetworkmanager = networkManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if danaHelper.checkNetworkConnection(){
+            print("connected")
+        }
+            else {
+                print("notconnected")
+            }
+        }
+        //currentNetworkmanager.fetchMaplocationsfromDANA()
         // Do any additional setup after loading the view.
     }
 //this is to test the git
 
-}
+
 
