@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */; };
+		59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */; };
+		59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45127AEDAFC00C751C5 /* ViewController.swift */; };
+		59A3B45527AEDAFC00C751C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45327AEDAFC00C751C5 /* Main.storyboard */; };
+		59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */; };
+		59A3B45A27AEDAFE00C751C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45927AEDAFE00C751C5 /* Assets.xcassets */; };
+		59A3B45D27AEDAFE00C751C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */; };
+		59A3B46827AEDAFE00C751C5 /* DANATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B46727AEDAFE00C751C5 /* DANATests.swift */; };
+		59A3B47227AEDAFE00C751C5 /* DANAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B47127AEDAFE00C751C5 /* DANAUITests.swift */; };
+		59A3B47427AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B47327AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift */; };
+		CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59A3B46427AEDAFE00C751C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59A3B44227AEDAFC00C751C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59A3B44927AEDAFC00C751C5;
+			remoteInfo = DANA;
+		};
+		59A3B46E27AEDAFE00C751C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59A3B44227AEDAFC00C751C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59A3B44927AEDAFC00C751C5;
+			remoteInfo = DANA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A3B44A27AEDAFC00C751C5 /* DANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		59A3B45127AEDAFC00C751C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59A3B45427AEDAFC00C751C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59A3B45727AEDAFC00C751C5 /* DANA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DANA.xcdatamodel; sourceTree = "<group>"; };
+		59A3B45927AEDAFE00C751C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59A3B45C27AEDAFE00C751C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59A3B45E27AEDAFE00C751C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A3B46327AEDAFE00C751C5 /* DANATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A3B46727AEDAFE00C751C5 /* DANATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANATests.swift; sourceTree = "<group>"; };
+		59A3B46D27AEDAFE00C751C5 /* DANAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A3B47127AEDAFE00C751C5 /* DANAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANAUITests.swift; sourceTree = "<group>"; };
+		59A3B47327AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
+		E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59A3B44727AEDAFC00C751C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B46027AEDAFE00C751C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B46A27AEDAFE00C751C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59A3B44127AEDAFC00C751C5 = {
+			isa = PBXGroup;
+			children = (
+				59A3B44C27AEDAFC00C751C5 /* DANA */,
+				59A3B46627AEDAFE00C751C5 /* DANATests */,
+				59A3B47027AEDAFE00C751C5 /* DANAUITests */,
+				59A3B44B27AEDAFC00C751C5 /* Products */,
+				D7B148036D9B20A1E810718F /* Pods */,
+				692BCDE4CAD5A718F283A891 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59A3B44B27AEDAFC00C751C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B44A27AEDAFC00C751C5 /* DANA.app */,
+				59A3B46327AEDAFE00C751C5 /* DANATests.xctest */,
+				59A3B46D27AEDAFE00C751C5 /* DANAUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59A3B44C27AEDAFC00C751C5 /* DANA */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B48927AEE6B600C751C5 /* Main */,
+				59A3B48827AEE58600C751C5 /* Networking */,
+				59A3B48727AEE52C00C751C5 /* Resources */,
+				59A3B48627AEE50C00C751C5 /* StoryBoards */,
+				59A3B48527AEE40600C751C5 /* ViewModels */,
+				59A3B48427AEE3FD00C751C5 /* Models */,
+				59A3B48027AEE3A700C751C5 /* Controllers */,
+				59A3B45E27AEDAFE00C751C5 /* Info.plist */,
+				59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */,
+			);
+			path = DANA;
+			sourceTree = "<group>";
+		};
+		59A3B46627AEDAFE00C751C5 /* DANATests */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B46727AEDAFE00C751C5 /* DANATests.swift */,
+			);
+			path = DANATests;
+			sourceTree = "<group>";
+		};
+		59A3B47027AEDAFE00C751C5 /* DANAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B47127AEDAFE00C751C5 /* DANAUITests.swift */,
+				59A3B47327AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift */,
+			);
+			path = DANAUITests;
+			sourceTree = "<group>";
+		};
+		59A3B48027AEE3A700C751C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B45127AEDAFC00C751C5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		59A3B48427AEE3FD00C751C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59A3B48527AEE40600C751C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59A3B48627AEE50C00C751C5 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */,
+				59A3B45327AEDAFC00C751C5 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		59A3B48727AEE52C00C751C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B45927AEDAFE00C751C5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59A3B48827AEE58600C751C5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		59A3B48927AEE6B600C751C5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */,
+				59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		692BCDE4CAD5A718F283A891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7B148036D9B20A1E810718F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */,
+				E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59A3B44927AEDAFC00C751C5 /* DANA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59A3B47727AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANA" */;
+			buildPhases = (
+				2667FCA1C4FA87D73348FC66 /* [CP] Check Pods Manifest.lock */,
+				59A3B44627AEDAFC00C751C5 /* Sources */,
+				59A3B44727AEDAFC00C751C5 /* Frameworks */,
+				59A3B44827AEDAFC00C751C5 /* Resources */,
+				453621CE5F5974149DD94770 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DANA;
+			productName = DANA;
+			productReference = 59A3B44A27AEDAFC00C751C5 /* DANA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59A3B46227AEDAFE00C751C5 /* DANATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59A3B47A27AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANATests" */;
+			buildPhases = (
+				59A3B45F27AEDAFE00C751C5 /* Sources */,
+				59A3B46027AEDAFE00C751C5 /* Frameworks */,
+				59A3B46127AEDAFE00C751C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59A3B46527AEDAFE00C751C5 /* PBXTargetDependency */,
+			);
+			name = DANATests;
+			productName = DANATests;
+			productReference = 59A3B46327AEDAFE00C751C5 /* DANATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59A3B46C27AEDAFE00C751C5 /* DANAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59A3B47D27AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANAUITests" */;
+			buildPhases = (
+				59A3B46927AEDAFE00C751C5 /* Sources */,
+				59A3B46A27AEDAFE00C751C5 /* Frameworks */,
+				59A3B46B27AEDAFE00C751C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59A3B46F27AEDAFE00C751C5 /* PBXTargetDependency */,
+			);
+			name = DANAUITests;
+			productName = DANAUITests;
+			productReference = 59A3B46D27AEDAFE00C751C5 /* DANAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59A3B44227AEDAFC00C751C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					59A3B44927AEDAFC00C751C5 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					59A3B46227AEDAFE00C751C5 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 59A3B44927AEDAFC00C751C5;
+					};
+					59A3B46C27AEDAFE00C751C5 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 59A3B44927AEDAFC00C751C5;
+					};
+				};
+			};
+			buildConfigurationList = 59A3B44527AEDAFC00C751C5 /* Build configuration list for PBXProject "DANA" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59A3B44127AEDAFC00C751C5;
+			productRefGroup = 59A3B44B27AEDAFC00C751C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59A3B44927AEDAFC00C751C5 /* DANA */,
+				59A3B46227AEDAFE00C751C5 /* DANATests */,
+				59A3B46C27AEDAFE00C751C5 /* DANAUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59A3B44827AEDAFC00C751C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A3B45D27AEDAFE00C751C5 /* LaunchScreen.storyboard in Resources */,
+				59A3B45A27AEDAFE00C751C5 /* Assets.xcassets in Resources */,
+				59A3B45527AEDAFC00C751C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B46127AEDAFE00C751C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B46B27AEDAFE00C751C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2667FCA1C4FA87D73348FC66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DANA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		453621CE5F5974149DD94770 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59A3B44627AEDAFC00C751C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */,
+				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
+				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
+				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B45F27AEDAFE00C751C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A3B46827AEDAFE00C751C5 /* DANATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A3B46927AEDAFE00C751C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A3B47427AEDAFE00C751C5 /* DANAUITestsLaunchTests.swift in Sources */,
+				59A3B47227AEDAFE00C751C5 /* DANAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59A3B46527AEDAFE00C751C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59A3B44927AEDAFC00C751C5 /* DANA */;
+			targetProxy = 59A3B46427AEDAFE00C751C5 /* PBXContainerItemProxy */;
+		};
+		59A3B46F27AEDAFE00C751C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59A3B44927AEDAFC00C751C5 /* DANA */;
+			targetProxy = 59A3B46E27AEDAFE00C751C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59A3B45327AEDAFC00C751C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59A3B45427AEDAFC00C751C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59A3B45C27AEDAFE00C751C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59A3B47527AEDAFF00C751C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59A3B47627AEDAFF00C751C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59A3B47827AEDAFF00C751C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DANA/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59A3B47927AEDAFF00C751C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DANA/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		59A3B47B27AEDAFF00C751C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DANA.app/DANA";
+			};
+			name = Debug;
+		};
+		59A3B47C27AEDAFF00C751C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DANA.app/DANA";
+			};
+			name = Release;
+		};
+		59A3B47E27AEDAFF00C751C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DANA;
+			};
+			name = Debug;
+		};
+		59A3B47F27AEDAFF00C751C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DANA;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59A3B44527AEDAFC00C751C5 /* Build configuration list for PBXProject "DANA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A3B47527AEDAFF00C751C5 /* Debug */,
+				59A3B47627AEDAFF00C751C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59A3B47727AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A3B47827AEDAFF00C751C5 /* Debug */,
+				59A3B47927AEDAFF00C751C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59A3B47A27AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A3B47B27AEDAFF00C751C5 /* Debug */,
+				59A3B47C27AEDAFF00C751C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59A3B47D27AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A3B47E27AEDAFF00C751C5 /* Debug */,
+				59A3B47F27AEDAFF00C751C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59A3B45727AEDAFC00C751C5 /* DANA.xcdatamodel */,
+			);
+			currentVersion = 59A3B45727AEDAFC00C751C5 /* DANA.xcdatamodel */;
+			path = DANA.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 59A3B44227AEDAFC00C751C5 /* Project object */;
+}
