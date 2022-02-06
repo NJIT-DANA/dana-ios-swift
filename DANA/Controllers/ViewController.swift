@@ -11,17 +11,20 @@ class ViewController: UIViewController {
     let currentNetworkmanager = networkManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        if danaHelper.checkNetworkConnection(){
-            print("connected")
-        }
-            else {
-                print("notconnected")
-            }
-        }
+//        if danaHelper.checkNetworkConnection(){
+//            print("connected")
+//        }
+//            else {
+//                print("notconnected")
+//            }
+//        }
         //currentNetworkmanager.fetchMaplocationsfromDANA()
+        currentNetworkmanager.fetchMaplocationsfromDANA {
+            print("finally came here")
+        }
         // Do any additional setup after loading the view.
     }
 //this is to test the git
 
-
+}
 
