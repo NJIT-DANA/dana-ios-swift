@@ -10,9 +10,9 @@ struct apiConstants{
     
     static let geolocationApi = "https://dana.njit.edu/api/geolocations"
     static let collectionsApi = "http://dana.njit.edu/api/collections"
-    static let publicspaceApi = ""
-    static let buildingsApi = ""
-    static let architectureApi = ""
+    static let publicspaceApi = "https://dana.njit.edu/api/items?collection=5"
+    static let buildingsApi = "https://dana.njit.edu/api/items?collection=3"
+    static let architectsApi = "https://dana.njit.edu/api/items?collection=2"
     
 }
 struct textConstants{
