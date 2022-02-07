@@ -7,9 +7,9 @@
 
 import Foundation
 struct danaHelper{
-
-   //check network connection for the APIcalls
-   static func checkNetworkConnection()-> Bool{
+    
+    //check network connection for the APIcalls
+    static func checkNetworkConnection()-> Bool{
         if Network.reachability.status == Network.Status.unreachable {
             return false
         }else{

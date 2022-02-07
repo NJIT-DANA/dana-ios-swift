@@ -22,6 +22,10 @@
 		59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */; };
 		59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B49327AF1E1B00C751C5 /* Reachability.swift */; };
 		59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B49527AF256C00C751C5 /* DanaHelper.swift */; };
+		59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */; };
+		59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */; };
+		59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */; };
+		59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D827B032F200C751C5 /* PublicArtModel.swift */; };
 		CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,10 @@
 		59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationModel.swift; sourceTree = "<group>"; };
 		59A3B49327AF1E1B00C751C5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		59A3B49527AF256C00C751C5 /* DanaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanaHelper.swift; sourceTree = "<group>"; };
+		59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
+		59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSpaceModel.swift; sourceTree = "<group>"; };
+		59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsModel.swift; sourceTree = "<group>"; };
+		59A3B4D827B032F200C751C5 /* PublicArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicArtModel.swift; sourceTree = "<group>"; };
 		DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
 		E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */,
+				59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */,
+				59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */,
+				59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */,
+				59A3B4D827B032F200C751C5 /* PublicArtModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,8 +415,12 @@
 				59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */,
 				59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
+				59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */,
+				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
 				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
+				59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */,
+				59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */,
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
 				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,

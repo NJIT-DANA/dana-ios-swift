@@ -19,7 +19,10 @@ class ViewController: UIViewController {
 //            }
 //        }
         //currentNetworkmanager.fetchMaplocationsfromDANA()
-        currentNetworkmanager.fetchMaplocationsfromDANA {
+        currentNetworkmanager.fetchPublicArtfromDANA {
+            
+      
+            
             print("finally came here")
         }
         // Do any additional setup after loading the view.
