@@ -6,28 +6,33 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
+    
     let currentNetworkmanager = networkManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if danaHelper.checkNetworkConnection(){
-//            print("connected")
-//        }
-//            else {
-//                print("notconnected")
-//            }
-//        }
-        //currentNetworkmanager.fetchMaplocationsfromDANA()
-        currentNetworkmanager.fetchPublicArtfromDANA {
-            
-      
-            
+        let indicatorView = danaHelper.activityIndicator(style: .large,
+                                                       center: self.view.center)
+        self.view.addSubview(indicatorView)
+        indicatorView.startAnimating()
+        
+        
+        
+        
+        
+        currentNetworkmanager.fetchArchitectsfromDANA {
+       
             print("finally came here")
+            indicatorView.stopAnimating()
         }
+    
+    
         // Do any additional setup after loading the view.
+    
     }
-//this is to test the git
 
+    
 }
 

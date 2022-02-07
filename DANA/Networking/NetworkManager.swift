@@ -60,6 +60,8 @@ class networkManager{
     }
     }
 }
+
+
 //with out completion handler
  
  //fetch map locations from API

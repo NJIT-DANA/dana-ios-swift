@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */; };
 		59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */; };
 		59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */; };
 		59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45127AEDAFC00C751C5 /* ViewController.swift */; };
@@ -26,7 +27,8 @@
 		59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */; };
 		59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */; };
 		59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D827B032F200C751C5 /* PublicArtModel.swift */; };
-		CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */; };
+		59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */; };
+		59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E027B0F60F00C751C5 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B44A27AEDAFC00C751C5 /* DANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +72,11 @@
 		59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSpaceModel.swift; sourceTree = "<group>"; };
 		59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsModel.swift; sourceTree = "<group>"; };
 		59A3B4D827B032F200C751C5 /* PublicArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicArtModel.swift; sourceTree = "<group>"; };
-		DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
-		E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
+		59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		59A3B4E027B0F60F00C751C5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A29184E15F08019596899088 /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
+		A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C58C0097D99E8C51985A96 /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD94F81824FF637AC9F0D876 /* Pods_DANA.framework in Frameworks */,
+				23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FD4545947F898F66916B093 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		59A3B44127AEDAFC00C751C5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +121,7 @@
 				59A3B47027AEDAFE00C751C5 /* DANAUITests */,
 				59A3B44B27AEDAFC00C751C5 /* Products */,
 				D7B148036D9B20A1E810718F /* Pods */,
-				692BCDE4CAD5A718F283A891 /* Frameworks */,
+				4FD4545947F898F66916B093 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +171,8 @@
 		59A3B48027AEE3A700C751C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */,
+				59A3B4E027B0F60F00C751C5 /* MapViewController.swift */,
 				59A3B45127AEDAFC00C751C5 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -220,19 +234,11 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		692BCDE4CAD5A718F283A891 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				319D9F0F108FEF879A6A6724 /* Pods_DANA.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D7B148036D9B20A1E810718F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */,
-				E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */,
+				D1C58C0097D99E8C51985A96 /* Pods-DANA.debug.xcconfig */,
+				A29184E15F08019596899088 /* Pods-DANA.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -244,11 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59A3B47727AEDAFF00C751C5 /* Build configuration list for PBXNativeTarget "DANA" */;
 			buildPhases = (
-				2667FCA1C4FA87D73348FC66 /* [CP] Check Pods Manifest.lock */,
+				534CBD7664FD61161CC278F4 /* [CP] Check Pods Manifest.lock */,
 				59A3B44627AEDAFC00C751C5 /* Sources */,
 				59A3B44727AEDAFC00C751C5 /* Frameworks */,
 				59A3B44827AEDAFC00C751C5 /* Resources */,
-				453621CE5F5974149DD94770 /* [CP] Embed Pods Frameworks */,
+				57D138E2D64698C00B2E184B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,7 +372,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2667FCA1C4FA87D73348FC66 /* [CP] Check Pods Manifest.lock */ = {
+		534CBD7664FD61161CC278F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,7 +394,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		453621CE5F5974149DD94770 /* [CP] Embed Pods Frameworks */ = {
+		57D138E2D64698C00B2E184B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,6 +422,7 @@
 				59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
 				59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */,
+				59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */,
 				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
 				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
@@ -424,6 +431,7 @@
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
 				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
+				59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */,
 				59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,7 +606,7 @@
 		};
 		59A3B47827AEDAFF00C751C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD3A0A02F3CA2C12C56601CC /* Pods-DANA.debug.xcconfig */;
+			baseConfigurationReference = D1C58C0097D99E8C51985A96 /* Pods-DANA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -627,7 +635,7 @@
 		};
 		59A3B47927AEDAFF00C751C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5AEB932C8C90EBD580F221F /* Pods-DANA.release.xcconfig */;
+			baseConfigurationReference = A29184E15F08019596899088 /* Pods-DANA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
