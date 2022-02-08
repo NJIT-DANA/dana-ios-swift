@@ -15,6 +15,11 @@ struct ArchitectsModel: Decodable {
 
 struct Element_texts_Architects: Decodable {
     let text: String
+    let element: Element_type
+}
+
+struct Element_type: Decodable {
+    let name: String
 }
 struct File_Architects: Decodable {
     let url: String

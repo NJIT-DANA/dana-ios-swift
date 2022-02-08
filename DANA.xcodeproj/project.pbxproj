@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */; };
+		596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */; };
 		59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */; };
 		59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */; };
 		59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45127AEDAFC00C751C5 /* ViewController.swift */; };
@@ -29,6 +30,9 @@
 		59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4D827B032F200C751C5 /* PublicArtModel.swift */; };
 		59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */; };
 		59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E027B0F60F00C751C5 /* MapViewController.swift */; };
+		59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */; };
+		59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E527B1957600C751C5 /* ImageModel.swift */; };
+		59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANACustomTableViewCell.swift; sourceTree = "<group>"; };
 		59A3B44A27AEDAFC00C751C5 /* DANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +79,9 @@
 		59A3B4D827B032F200C751C5 /* PublicArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicArtModel.swift; sourceTree = "<group>"; };
 		59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		59A3B4E027B0F60F00C751C5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsViewModel.swift; sourceTree = "<group>"; };
+		59A3B4E527B1957600C751C5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsFirmsViewController.swift; sourceTree = "<group>"; };
 		A29184E15F08019596899088 /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
 		A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C58C0097D99E8C51985A96 /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		596F5C3E27B249CD00CBFB64 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		59A3B44127AEDAFC00C751C5 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +154,8 @@
 		59A3B44C27AEDAFC00C751C5 /* DANA */ = {
 			isa = PBXGroup;
 			children = (
+				596F5C3E27B249CD00CBFB64 /* Cells */,
+				59A3B4E727B22C0F00C751C5 /* CoreData */,
 				59A3B48927AEE6B600C751C5 /* Main */,
 				59A3B48827AEE58600C751C5 /* Networking */,
 				59A3B48727AEE52C00C751C5 /* Resources */,
@@ -174,6 +192,7 @@
 				59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */,
 				59A3B4E027B0F60F00C751C5 /* MapViewController.swift */,
 				59A3B45127AEDAFC00C751C5 /* ViewController.swift */,
+				59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +205,7 @@
 				59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */,
 				59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */,
 				59A3B4D827B032F200C751C5 /* PublicArtModel.swift */,
+				59A3B4E527B1957600C751C5 /* ImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +213,7 @@
 		59A3B48527AEE40600C751C5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -232,6 +253,13 @@
 				59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		59A3B4E727B22C0F00C751C5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D7B148036D9B20A1E810718F /* Pods */ = {
@@ -426,12 +454,16 @@
 				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
 				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
+				59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */,
 				59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */,
 				59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */,
+				59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */,
+				59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */,
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
 				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
 				59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */,
+				596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */,
 				59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -594,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

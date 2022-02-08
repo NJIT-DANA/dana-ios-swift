@@ -22,11 +22,11 @@ class ViewController: UIViewController {
         
         
         
-        currentNetworkmanager.fetchArchitectsfromDANA {
-       
-            print("finally came here")
-            indicatorView.stopAnimating()
-        }
+//        currentNetworkmanager.fetchArchitectsfromDANA {
+//       
+//            print("finally came here")
+//            indicatorView.stopAnimating()
+//        }
     
     
         // Do any additional setup after loading the view.

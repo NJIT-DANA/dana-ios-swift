@@ -6,47 +6,42 @@
 //
 
 import UIKit
+import CoreData
 
 class CollectionViewController: UIViewController {
 let currentNetworkmanager = networkManager()
+var architectViewModel = ArchitectsViewModel()
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             self.setUI()
-            let indicatorView = danaHelper.activityIndicator(style: .large,
-                                                           center: self.view.center)
-            self.view.addSubview(indicatorView)
-            indicatorView.startAnimating()
+            self.fetchArchitectsfromAPI()
             
-            
-            
-            
-            
-//            currentNetworkmanager.fetchArchitectsfromDANA {
-//
-//                print("finally came here")
-//                indicatorView.stopAnimating()
-//            }
-//
-
-//            currentNetworkmanager.fetchBuildingsfromDANA {
-//                print("finally came here")
-//                indicatorView.stopAnimating()
-//            }
-//            currentNetworkmanager.fetchPublicSpacesfromDANA {
-//
-//                print("finally came here")
-//                indicatorView.stopAnimating()
-//            }
-            currentNetworkmanager.fetchPublicArtfromDANA {
-                print("finally came here")
-                indicatorView.stopAnimating()
-            }
     }
     
-
+    
+    
     func setUI() {
         self.navigationItem.title = textConstants.collectionTitle
         self.navigationController?.navigationBar.backgroundColor = UIColor.black
     }
 
+    
+    //MARK:- architect Methods
+    
+    func fetchArchitectsfromAPI(){
+        let indicatorView = danaHelper.activityIndicator(style: .large,
+                                                       center: self.view.center)
+        self.view.addSubview(indicatorView)
+        indicatorView.startAnimating()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        architectViewModel.makeFetchArchitectsApiCall(context: context) {
+            indicatorView.stopAnimating()
+            
+        }
+        
+    }
+  
+  
 }
