@@ -40,6 +40,16 @@ class networkManager{
     completionHandler(architects)
     }
     }
+    
+    //fetch Images from API
+    func fetchImagefromDANA(_ endUrl: String,completionHandler: @escaping (_ imageurlsArray: [ImageModel]) -> (Void)) {
+    let request = AF.request(endUrl)
+    request.responseDecodable(of: [ImageModel].self) { (response) in
+    guard let images = response.value else { return }
+    print(images)
+    completionHandler(images)
+    }
+    }
 
     //fetch public spaces from API
     func fetchPublicSpacesfromDANA(completionHandler: @escaping () -> (Void)) {
@@ -61,15 +71,7 @@ class networkManager{
     }
     }
     
-    //fetch Images from API
-    func fetchImagefromDANA(_ endUrl: String,completionHandler: @escaping () -> (Void)) {
-    let request = AF.request(endUrl)
-    request.responseDecodable(of: [ImageModel].self) { (response) in
-    guard let images = response.value else { return }
-    print(images)
-    completionHandler()
-    }
-    }
+   
     
  
 }

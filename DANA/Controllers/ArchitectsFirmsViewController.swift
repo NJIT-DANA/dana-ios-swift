@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
 
 class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -14,13 +17,18 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
     var architectArrayfromDB = [Architects_Firms]()
             override func viewDidLoad() {
                 super.viewDidLoad()
+                let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+                print(paths[0])
                 self.setUI()
-                self.architectArrayfromDB = architectViewModel.fetchallArchitectsfromDB()
+                if !architectViewModel.checkArchitectsisEmpty(entity: textConstants.architectEntity){
+                    self.architectArrayfromDB = architectViewModel.fetchallArchitectsfromDB()
+                }
+                //self.architectArrayfromDB = architectViewModel.fetchallArchitectsfromDB()
         }
         
         
         
-        
+   
         func setUI() {
             self.navigationItem.title = textConstants.architectViewTitle
             self.navigationController?.navigationBar.backgroundColor = UIColor.black
@@ -36,14 +44,24 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
          return architectArrayfromDB.count
     }
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell:DANACustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "architectcell", for: indexPath) as! DANACustomTableViewCell
+         let cell:DANACustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: textConstants.architectcell, for: indexPath) as! DANACustomTableViewCell
          let architect = architectArrayfromDB[indexPath.row] as Architects_Firms
-         cell.pictureView.image = UIImage(named: "placeholder")
+         cell.pictureView.image = UIImage(named: textConstants.placeholderImage)
+         if let url = architect.imageUrl{
+             let imageUrl = URL(string: url)
+             cell.pictureView.af_setImage(withURL: imageUrl!)
+                                          
+//             cell.pictureView.af_setImage(withURL: imageUrl!, cacheKey: "", placeholderImage: .none, serializer: .none, filter: .none, progress: .none, progressQueue: .global(), imageTransition: .noTransition, runImageTransitionIfCached: false) {  (response) -> Void in
+//                 print("image: \(cell.pictureView.image)")
+             }
          cell.titleLabel.text = architect.name
+         return cell
+         }
+        
         
 
-        return cell
-    }
+      
+    
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //            return "Section \(section)"
 //        }
