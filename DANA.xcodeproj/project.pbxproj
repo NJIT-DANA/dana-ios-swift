@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */; };
 		596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */; };
-		59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */; };
-		59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */; };
-		59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45127AEDAFC00C751C5 /* ViewController.swift */; };
+		596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5927B75D8900CBFB64 /* AppDelegate.swift */; };
+		596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */; };
 		59A3B45527AEDAFC00C751C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45327AEDAFC00C751C5 /* Main.storyboard */; };
 		59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */; };
 		59A3B45A27AEDAFE00C751C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45927AEDAFE00C751C5 /* Assets.xcassets */; };
@@ -54,15 +53,14 @@
 
 /* Begin PBXFileReference section */
 		596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANACustomTableViewCell.swift; sourceTree = "<group>"; };
+		596F5C5927B75D8900CBFB64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DANA/Main/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DANA/Main/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
+		596F5C5D27B75D9900CBFB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = DANA/Info.plist; sourceTree = SOURCE_ROOT; };
 		59A3B44A27AEDAFC00C751C5 /* DANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59A3B45127AEDAFC00C751C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59A3B45427AEDAFC00C751C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A3B45727AEDAFC00C751C5 /* DANA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DANA.xcdatamodel; sourceTree = "<group>"; };
 		59A3B45927AEDAFE00C751C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A3B45C27AEDAFE00C751C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		59A3B45E27AEDAFE00C751C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59A3B46327AEDAFE00C751C5 /* DANATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B46727AEDAFE00C751C5 /* DANATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANATests.swift; sourceTree = "<group>"; };
 		59A3B46D27AEDAFE00C751C5 /* DANAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,12 +119,131 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		596F5C3E27B249CD00CBFB64 /* Cells */ = {
+		596F5C4527B7481200CBFB64 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				596F5C5227B74A7500CBFB64 /* AR */,
+				596F5C5127B74A6E00CBFB64 /* Map */,
+				596F5C4727B7483100CBFB64 /* Collections */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		596F5C4727B7483100CBFB64 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */,
+				596F5C4C27B7487900CBFB64 /* Public Art */,
+				596F5C4B27B7486E00CBFB64 /* Public Spaces */,
+				596F5C4A27B7486100CBFB64 /* Architects_Firms */,
+				596F5C4827B7484A00CBFB64 /* Buildings */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		596F5C4827B7484A00CBFB64 /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */,
+			);
+			path = Buildings;
+			sourceTree = "<group>";
+		};
+		596F5C4A27B7486100CBFB64 /* Architects_Firms */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */,
+				59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */,
+				59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */,
+				59A3B4E527B1957600C751C5 /* ImageModel.swift */,
+			);
+			path = Architects_Firms;
+			sourceTree = "<group>";
+		};
+		596F5C4B27B7486E00CBFB64 /* Public Spaces */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */,
+			);
+			path = "Public Spaces";
+			sourceTree = "<group>";
+		};
+		596F5C4C27B7487900CBFB64 /* Public Art */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4D827B032F200C751C5 /* PublicArtModel.swift */,
+			);
+			path = "Public Art";
+			sourceTree = "<group>";
+		};
+		596F5C4D27B7493600CBFB64 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				596F5C5D27B75D9900CBFB64 /* Info.plist */,
+				596F5C5927B75D8900CBFB64 /* AppDelegate.swift */,
+				596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */,
+				59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */,
+				59A3B45327AEDAFC00C751C5 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		596F5C4E27B7495200CBFB64 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				596F5C5427B74B8D00CBFB64 /* Constants */,
+				596F5C5327B74B0C00CBFB64 /* CustomCells */,
+				59A3B48627AEE50C00C751C5 /* StoryBoards */,
+				59A3B48827AEE58600C751C5 /* Networking */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		596F5C5027B7498100CBFB64 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B49527AF256C00C751C5 /* DanaHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		596F5C5127B74A6E00CBFB64 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B4E027B0F60F00C751C5 /* MapViewController.swift */,
+				59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		596F5C5227B74A7500CBFB64 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		596F5C5327B74B0C00CBFB64 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
 				596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */,
 			);
-			path = Cells;
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		596F5C5427B74B8D00CBFB64 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				59A3B48A27AF01E700C751C5 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		596F5C5527B756C100CBFB64 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		59A3B44127AEDAFC00C751C5 = {
@@ -154,16 +271,12 @@
 		59A3B44C27AEDAFC00C751C5 /* DANA */ = {
 			isa = PBXGroup;
 			children = (
-				596F5C3E27B249CD00CBFB64 /* Cells */,
-				59A3B4E727B22C0F00C751C5 /* CoreData */,
-				59A3B48927AEE6B600C751C5 /* Main */,
-				59A3B48827AEE58600C751C5 /* Networking */,
+				596F5C5527B756C100CBFB64 /* Main */,
+				596F5C5027B7498100CBFB64 /* Utils */,
+				596F5C4E27B7495200CBFB64 /* Common */,
+				596F5C4D27B7493600CBFB64 /* Application */,
+				596F5C4527B7481200CBFB64 /* Modules */,
 				59A3B48727AEE52C00C751C5 /* Resources */,
-				59A3B48627AEE50C00C751C5 /* StoryBoards */,
-				59A3B48527AEE40600C751C5 /* ViewModels */,
-				59A3B48427AEE3FD00C751C5 /* Models */,
-				59A3B48027AEE3A700C751C5 /* Controllers */,
-				59A3B45E27AEDAFE00C751C5 /* Info.plist */,
 				59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */,
 			);
 			path = DANA;
@@ -186,43 +299,9 @@
 			path = DANAUITests;
 			sourceTree = "<group>";
 		};
-		59A3B48027AEE3A700C751C5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */,
-				59A3B4E027B0F60F00C751C5 /* MapViewController.swift */,
-				59A3B45127AEDAFC00C751C5 /* ViewController.swift */,
-				59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		59A3B48427AEE3FD00C751C5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */,
-				59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */,
-				59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */,
-				59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */,
-				59A3B4D827B032F200C751C5 /* PublicArtModel.swift */,
-				59A3B4E527B1957600C751C5 /* ImageModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		59A3B48527AEE40600C751C5 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		59A3B48627AEE50C00C751C5 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */,
-				59A3B45327AEDAFC00C751C5 /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -231,8 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				59A3B45927AEDAFE00C751C5 /* Assets.xcassets */,
-				59A3B48A27AF01E700C751C5 /* AppConstants.swift */,
-				59A3B49527AF256C00C751C5 /* DanaHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,22 +321,6 @@
 				59A3B49327AF1E1B00C751C5 /* Reachability.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		59A3B48927AEE6B600C751C5 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				59A3B44D27AEDAFC00C751C5 /* AppDelegate.swift */,
-				59A3B44F27AEDAFC00C751C5 /* SceneDelegate.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		59A3B4E727B22C0F00C751C5 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D7B148036D9B20A1E810718F /* Pods */ = {
@@ -447,12 +508,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */,
-				59A3B45227AEDAFC00C751C5 /* ViewController.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
+				596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */,
 				59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */,
 				59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */,
 				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
-				59A3B44E27AEDAFC00C751C5 /* AppDelegate.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
 				59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */,
 				59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */,
@@ -460,7 +520,7 @@
 				59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */,
 				59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */,
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
-				59A3B45027AEDAFC00C751C5 /* SceneDelegate.swift in Sources */,
+				596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
 				59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */,
 				596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */,
@@ -658,7 +718,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dana.DANA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -688,7 +748,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.njit.DANA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dana.DANA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
