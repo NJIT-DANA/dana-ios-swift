@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error)
             }
         }
+        GMSServices.provideAPIKey(textConstants.googleAPIKey)
         return true
     }
 

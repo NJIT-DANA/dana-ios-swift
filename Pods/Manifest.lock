@@ -2,20 +2,36 @@ PODS:
   - Alamofire (5.5.0)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
+  - GoogleMaps (6.0.1):
+    - GoogleMaps/Maps (= 6.0.1)
+  - GoogleMaps/Base (6.0.1)
+  - GoogleMaps/Maps (6.0.1):
+    - GoogleMaps/Base
+  - GooglePlaces (6.0.0)
+  - SwiftLint (0.46.3)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - GoogleMaps
+  - GooglePlaces
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - GoogleMaps
+    - GooglePlaces
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
+  GooglePlaces: c97d96ae68594acb64035c9ca9f26fbfc1d23af1
+  SwiftLint: ae76d82f056734f853c8cd0371503252c606c482
 
-PODFILE CHECKSUM: 01ce7cf5af6432c1a45a22c6fbe1f9dd11e32270
+PODFILE CHECKSUM: 36ece322b53d39e6f154207e01e37ceac08b0859
 
 COCOAPODS: 1.11.2

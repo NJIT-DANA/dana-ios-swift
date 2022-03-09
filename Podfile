@@ -7,7 +7,9 @@ platform :ios, '13.0'
   use_frameworks!
     pod 'Alamofire'
     pod 'AlamofireImage'
-    
+    pod 'SwiftLint'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
 end
 

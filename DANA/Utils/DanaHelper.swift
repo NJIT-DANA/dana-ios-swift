@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 struct danaHelper {
     
@@ -32,4 +33,27 @@ struct danaHelper {
         }
         return activityIndicatorView
     }
+    
+    //check if  DB is empty for architects
+    static func checkifEntityisEmpty(entity:String)->Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        var isEmpty = false
+        request.fetchLimit = 1
+        do{
+            let count = try context.count(for: request)
+            if(count == 0){
+                isEmpty = true;
+            }
+            else{
+                isEmpty = false;
+            }
+        }
+        catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        return isEmpty
+    }
+
 }

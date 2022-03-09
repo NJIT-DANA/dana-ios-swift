@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:gz_2010_us_050_00_500k.geojson">
+   </FileRef>
+   <FileRef
+      location = "group:PublicArts+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:PublicArts+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:DANA.xcodeproj">
    </FileRef>
    <FileRef

@@ -17,14 +17,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
     
     
     @IBOutlet weak var locationMapView: MKMapView!
-    
-    //var maplocations : [MapLocation] = []
     var locationManager:CLLocationManager!
     var currentLocationStr = "Current location"
+    let currentNetworkmanager = networkManager()
+    var locnViewModel = GeoLocationViewModel()
+    var locnArrayfromDB = [GeoLocations]()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        fetchmaplocationsfromDB()
+       
+        if !danaHelper.checkifEntityisEmpty(entity: textConstants.locationEntity){
+            self.locnArrayfromDB = locnViewModel.fetchallLocationsfromDB()
+        }
+
         locationMapView.delegate = self
         let locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -49,6 +55,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
         }
     }
   
+    override func viewWillAppear(_ animated: Bool) {
+      
+        }
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+        self.addAnnotations()
+        }
+    }
+    
+
     //MARK:- CLLocationManagerDelegate Methods
     
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!){
@@ -56,28 +72,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
     }
     
     
-    func fetchmaplocationsfromDB(){
-        //uncomment later
-        // maplocations = fetchallMaplocations();
-        addAnnotations()
-        
-    }
-    
-    
-    
+  
     
     func addAnnotations(){
-        //uncomment later
-        //        for maplocationitem in maplocations{
-        //            let CLLCoordType = CLLocationCoordinate2D(latitude: maplocationitem.latitude,longitude: maplocationitem.longitude);
-        //            let anno = MKPointAnnotation();
-        //            anno.coordinate = CLLCoordType;
-        //            anno.title = maplocationitem.address;
-        //            anno.subtitle = maplocationitem.url;
-        //            myMap.addAnnotation(anno);
+                for maplocationitem in locnArrayfromDB{
+                    let CLLCoordType = CLLocationCoordinate2D(latitude: maplocationitem.latitude,longitude: maplocationitem.longitude);
+                    let annotation = MKPointAnnotation();
+                    annotation.coordinate = CLLCoordType;
+                    annotation.title = maplocationitem.title;
+                    annotation.subtitle = maplocationitem.url;
+                    locationMapView.addAnnotation(annotation);
     }
     
-    
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let mUserLocation:CLLocation = locations[0] as CLLocation
@@ -131,26 +138,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
         return currentLocationStr
     }
     
-    //fetch
-    //    func fetchallMaplocations()-> Array<MapLocation>{
-    //
-    //        //let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-    //              let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //              let context = appDelegate.persistentContainer.viewContext
-    //
-    //                let categoriesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MapLocation")
-    //
-    //                do {
-    //                    let categoriesFetch = try context.fetch(categoriesFetch) as! [MapLocation]
-    //                    print(categoriesFetch.count)
-    //                    print(categoriesFetch[0])
-    //                    return categoriesFetch
-    //                } catch {
-    //                    fatalError("Failed to fetch categories: \(error)")
-    //                }
-    //
-    //
-    //    }
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -172,15 +159,48 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
     
     
 }
+extension MapViewController:MKMapViewDelegate{
+    func getDirections(sourceLat:Double, sourceLong:Double, destLat:Double,destLong:Double) {
+        let request = MKDirections.Request()
+        // Source
+        let sourcePlaceMark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: sourceLat, longitude: sourceLong))
+        request.source = MKMapItem(placemark: sourcePlaceMark)
+        // Destination
+        let destPlaceMark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude:destLat, longitude: destLong))
+        request.destination = MKMapItem(placemark: destPlaceMark)
+        // Transport Types
+        request.transportType = [.automobile]
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            guard let response = response else {
+                print("Error: \(error?.localizedDescription ?? "No error specified").")
+                return
+            }
+            
+            let route = response.routes[0]
+            self.locationMapView.addOverlay(route.polyline)
+            
+            // …
+        }
+    }
+}
 
-
-extension MapViewController: MKMapViewDelegate {
+extension MapViewController {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("calloutAccessoryControlTapped")
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        print(view.annotation?.title! as Any)
+        if let lat = view.annotation?.coordinate.latitude{
+            if let long = view.annotation?.coordinate.latitude{
+                getDirections(sourceLat: (locationManager.location?.coordinate.latitude)!, sourceLong: (locationManager.location?.coordinate.longitude)!, destLat: lat, destLong: long)
+            }
+           
+        }
+        
         //uncomment later
         
         //        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

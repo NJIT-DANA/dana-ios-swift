@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */; };
+		591CCA1127C6A92400CCDE63 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CCA1027C6A92400CCDE63 /* GMSMapViewController.swift */; };
 		596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */; };
 		596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5927B75D8900CBFB64 /* AppDelegate.swift */; };
 		596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */; };
+		596F5C6027B7854A00CBFB64 /* GeoLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5F27B7854900CBFB64 /* GeoLocationViewModel.swift */; };
+		596F5C6227B7955400CBFB64 /* LocationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C6127B7955400CBFB64 /* LocationDetailsModel.swift */; };
+		596F5C6427B8771800CBFB64 /* PublicSpacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C6327B8771800CBFB64 /* PublicSpacesViewController.swift */; };
+		596F5C6627B877F600CBFB64 /* PublicSpaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C6527B877F600CBFB64 /* PublicSpaceViewModel.swift */; };
+		596F5C6827C15FB600CBFB64 /* BuildingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C6727C15FB600CBFB64 /* BuildingsViewModel.swift */; };
+		596F5C6A27C15FC600CBFB64 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C6927C15FC600CBFB64 /* BuildingsViewController.swift */; };
 		59A3B45527AEDAFC00C751C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45327AEDAFC00C751C5 /* Main.storyboard */; };
 		59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B45627AEDAFC00C751C5 /* DANA.xcdatamodeld */; };
 		59A3B45A27AEDAFE00C751C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A3B45927AEDAFE00C751C5 /* Assets.xcassets */; };
@@ -32,6 +39,9 @@
 		59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */; };
 		59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4E527B1957600C751C5 /* ImageModel.swift */; };
 		59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */; };
+		59EA8BE827C4BBE500E042E1 /* PublicArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA8BE727C4BBE500E042E1 /* PublicArtViewModel.swift */; };
+		59EA8BEA27C4BBF800E042E1 /* PublicArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA8BE927C4BBF800E042E1 /* PublicArtViewController.swift */; };
+		59EA8BEC27C60AAE00E042E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EA8BEB27C60AAE00E042E1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +62,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591CCA1027C6A92400CCDE63 /* GMSMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
 		596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANACustomTableViewCell.swift; sourceTree = "<group>"; };
 		596F5C5927B75D8900CBFB64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DANA/Main/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DANA/Main/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		596F5C5D27B75D9900CBFB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = DANA/Info.plist; sourceTree = SOURCE_ROOT; };
+		596F5C5F27B7854900CBFB64 /* GeoLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationViewModel.swift; sourceTree = "<group>"; };
+		596F5C6127B7955400CBFB64 /* LocationDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsModel.swift; sourceTree = "<group>"; };
+		596F5C6327B8771800CBFB64 /* PublicSpacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSpacesViewController.swift; sourceTree = "<group>"; };
+		596F5C6527B877F600CBFB64 /* PublicSpaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicSpaceViewModel.swift; sourceTree = "<group>"; };
+		596F5C6727C15FB600CBFB64 /* BuildingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewModel.swift; sourceTree = "<group>"; };
+		596F5C6927C15FC600CBFB64 /* BuildingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
 		59A3B44A27AEDAFC00C751C5 /* DANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A3B45427AEDAFC00C751C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A3B45727AEDAFC00C751C5 /* DANA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DANA.xcdatamodel; sourceTree = "<group>"; };
@@ -80,6 +97,9 @@
 		59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsViewModel.swift; sourceTree = "<group>"; };
 		59A3B4E527B1957600C751C5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsFirmsViewController.swift; sourceTree = "<group>"; };
+		59EA8BE727C4BBE500E042E1 /* PublicArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicArtViewModel.swift; sourceTree = "<group>"; };
+		59EA8BE927C4BBF800E042E1 /* PublicArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicArtViewController.swift; sourceTree = "<group>"; };
+		59EA8BEB27C60AAE00E042E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A29184E15F08019596899088 /* Pods-DANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.release.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.release.xcconfig"; sourceTree = "<group>"; };
 		A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C58C0097D99E8C51985A96 /* Pods-DANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DANA.debug.xcconfig"; path = "Target Support Files/Pods-DANA/Pods-DANA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EA8BEC27C60AAE00E042E1 /* MapKit.framework in Frameworks */,
 				23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +135,7 @@
 		4FD4545947F898F66916B093 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59EA8BEB27C60AAE00E042E1 /* MapKit.framework */,
 				A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */,
 			);
 			name = Frameworks;
@@ -132,6 +154,7 @@
 		596F5C4727B7483100CBFB64 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
+				59A3B4E527B1957600C751C5 /* ImageModel.swift */,
 				59A3B4DF27B0F60F00C751C5 /* CollectionViewController.swift */,
 				596F5C4C27B7487900CBFB64 /* Public Art */,
 				596F5C4B27B7486E00CBFB64 /* Public Spaces */,
@@ -145,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				59A3B4D227B00EEC00C751C5 /* BuildingModel.swift */,
+				596F5C6727C15FB600CBFB64 /* BuildingsViewModel.swift */,
+				596F5C6927C15FC600CBFB64 /* BuildingsViewController.swift */,
 			);
 			path = Buildings;
 			sourceTree = "<group>";
@@ -155,7 +180,6 @@
 				59A3B4EE27B231B600C751C5 /* ArchitectsFirmsViewController.swift */,
 				59A3B4D627B00F7100C751C5 /* ArchitectsModel.swift */,
 				59A3B4E327B1912600C751C5 /* ArchitectsViewModel.swift */,
-				59A3B4E527B1957600C751C5 /* ImageModel.swift */,
 			);
 			path = Architects_Firms;
 			sourceTree = "<group>";
@@ -164,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				59A3B4D427B00F0300C751C5 /* PublicSpaceModel.swift */,
+				596F5C6327B8771800CBFB64 /* PublicSpacesViewController.swift */,
+				596F5C6527B877F600CBFB64 /* PublicSpaceViewModel.swift */,
 			);
 			path = "Public Spaces";
 			sourceTree = "<group>";
@@ -172,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				59A3B4D827B032F200C751C5 /* PublicArtModel.swift */,
+				59EA8BE727C4BBE500E042E1 /* PublicArtViewModel.swift */,
+				59EA8BE927C4BBF800E042E1 /* PublicArtViewController.swift */,
 			);
 			path = "Public Art";
 			sourceTree = "<group>";
@@ -211,7 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				59A3B4E027B0F60F00C751C5 /* MapViewController.swift */,
+				591CCA1027C6A92400CCDE63 /* GMSMapViewController.swift */,
 				59A3B48E27AF122C00C751C5 /* GeoLocationModel.swift */,
+				596F5C5F27B7854900CBFB64 /* GeoLocationViewModel.swift */,
+				596F5C6127B7955400CBFB64 /* LocationDetailsModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -344,6 +375,7 @@
 				59A3B44727AEDAFC00C751C5 /* Frameworks */,
 				59A3B44827AEDAFC00C751C5 /* Resources */,
 				57D138E2D64698C00B2E184B /* [CP] Embed Pods Frameworks */,
+				AD49DB1093E9109715363675 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +532,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD49DB1093E9109715363675 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DANA/Pods-DANA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -507,24 +556,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591CCA1127C6A92400CCDE63 /* GMSMapViewController.swift in Sources */,
 				59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
 				596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */,
 				59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */,
 				59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */,
 				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
+				596F5C6627B877F600CBFB64 /* PublicSpaceViewModel.swift in Sources */,
+				59EA8BEA27C4BBF800E042E1 /* PublicArtViewController.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
+				596F5C6A27C15FC600CBFB64 /* BuildingsViewController.swift in Sources */,
 				59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */,
+				596F5C6027B7854A00CBFB64 /* GeoLocationViewModel.swift in Sources */,
 				59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */,
 				59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */,
 				59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */,
 				59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */,
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
+				59EA8BE827C4BBE500E042E1 /* PublicArtViewModel.swift in Sources */,
 				596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
 				59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */,
+				596F5C6227B7955400CBFB64 /* LocationDetailsModel.swift in Sources */,
 				596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */,
+				596F5C6427B8771800CBFB64 /* PublicSpacesViewController.swift in Sources */,
 				59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */,
+				596F5C6827C15FB600CBFB64 /* BuildingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +765,9 @@
 				DEVELOPMENT_TEAM = 7P2KFTR3WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DANA/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "allow app to use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "allow app to always know your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "allow app to know your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -737,6 +798,9 @@
 				DEVELOPMENT_TEAM = 7P2KFTR3WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DANA/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "allow app to use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "allow app to always know your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "allow app to know your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

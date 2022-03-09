@@ -10,17 +10,17 @@ import Alamofire
 import CoreData
 
 
-class ArchitectsViewModel: ObservableObject {
-    var architects : [ArchitectsModel] = []
+class PublicSpaceViewModel: ObservableObject {
+    var publicSpaces : [PublicSpaceModel] = []
     var imageUrlArray : [ImageModel] = []
     let currentNetworkmanager = networkManager()
     
     
-    func makeFetchArchitectsApiCall(context: NSManagedObjectContext,completionHandler: @escaping () -> (Void)){
-        currentNetworkmanager.fetchArchitectsfromDANA { architectsArray in
-            let architectsArrayforDB = architectsArray;
+    func makeFetchpublicSpacesApiCall(context: NSManagedObjectContext,completionHandler: @escaping () -> (Void)){
+        currentNetworkmanager.fetchPublicSpacesfromDANA {publicspacesArray in
+            let ArrayforDB = publicspacesArray;
             DispatchQueue.main.async {
-                self.architects = architectsArrayforDB
+                self.publicSpaces = ArrayforDB
                 self.saveData(context: context) {
                     completionHandler()
                 }
@@ -32,9 +32,9 @@ class ArchitectsViewModel: ObservableObject {
     }
     
     func makeFetchimagesApiCall(context: NSManagedObjectContext,completionHandler: @escaping () -> (Void)){
-        let architects = fetchallArchitectsfromDB()
-        for architect in architects {
-            if let imageUrl = architect.fileUrl{
+        let publicSpaces = fetchallPublicSpacesfromDB()
+        for space in publicSpaces {
+            if let imageUrl = space.fileUrl{
                 currentNetworkmanager.fetchImagefromDANA(imageUrl) { imageurlsArray in
                     let urlArrayforDB = imageurlsArray;
                     DispatchQueue.main.async {
@@ -47,14 +47,15 @@ class ArchitectsViewModel: ObservableObject {
             }
             completionHandler()
         }
-        NotificationCenter.default.post(name: .reloadArchitects, object: nil)
+        print("done")
+        NotificationCenter.default.post(name: .reloadSpaces, object: nil)
     }
     
     
     //saving data to core data
     func saveData(context: NSManagedObjectContext, completionHandler: @escaping () -> (Void)){
-        architects.forEach{(data) in
-            let entity = Architects_Firms(context:context)
+        publicSpaces.forEach{(data) in
+            let entity = PublicSpaces(context:context)
             entity.id = Int32(data.id)
             entity.fileUrl = data.files.url
             entity.name = data.element_texts[0].text
@@ -66,20 +67,14 @@ class ArchitectsViewModel: ObservableObject {
                     entity.subject = value.text
                 case "Description":
                     entity.descriptions = value.text
-                case "Occupation":
-                    entity.occupation = value.text
+                case "State":
+                    entity.state = value.text
                 case "Bibliography":
-                    entity.bibilography = value.text
+                    entity.bibliography = value.text
                 case "Web Resources":
-                    entity.webdetails = value.text
-                case "Birth Date":
-                    entity.birthdate = value.text
-                case "Death Date":
-                    entity.deathdate = value.text
-                case "Birth Place":
-                    entity.birthplace = value.text
-                case "Biographical Text":
-                    entity.biography = value.text
+                    entity.web = value.text
+                case "Condition History":
+                    entity.condition = value.text
                 default:
                     print("Enjoy your day!")
                 }
@@ -97,17 +92,17 @@ class ArchitectsViewModel: ObservableObject {
     
     //updating imagedata to core data
     func updateImageData(context: NSManagedObjectContext){
-        let architectsfromDB = fetchallArchitectsfromDB()
-        architectsfromDB.forEach{(dataArch) in
+        let spacesfromDB = fetchallPublicSpacesfromDB()
+        spacesfromDB.forEach{(dataSpace) in
             imageUrlArray.forEach{(dataImg) in
-                if dataArch.id == dataImg.item.id{
-                    dataArch.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
+                if dataSpace.id == dataImg.item.id{
+                    dataSpace.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
                 }
             }
         }
         do{
             try context.save()
-            print("success, updated image urls in architects")
+            print("success, updated image urls in publicspcaes")
         }
         catch{
             print(error.localizedDescription )
@@ -119,41 +114,21 @@ class ArchitectsViewModel: ObservableObject {
     
     
     //fetch all from DB
-    func fetchallArchitectsfromDB()-> Array<Architects_Firms>{
+    func fetchallPublicSpacesfromDB()-> Array<PublicSpaces>{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let fetchedArchitects = NSFetchRequest<NSFetchRequestResult>(entityName: textConstants.architectEntity)
+        let fetchedSpaces = NSFetchRequest<NSFetchRequestResult>(entityName: textConstants.spaceEntity)
         do {
-            let fetchedArchitects = try context.fetch(fetchedArchitects) as! [Architects_Firms]
-            print(fetchedArchitects.count)
-            return fetchedArchitects
+            let fetchedSpaces = try context.fetch(fetchedSpaces) as! [PublicSpaces]
+            print(fetchedSpaces.count)
+            return fetchedSpaces
         } catch {
             fatalError("Failed to fetch categories: \(error)")
         }
     }
     
     
-//    //check if  DB is empty for architects
-//    func checkArchitectsisEmpty(entity:String)->Bool {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let context = appDelegate.persistentContainer.viewContext
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-//        var isEmpty = false
-//        request.fetchLimit = 1
-//        do{
-//            let count = try context.count(for: request)
-//            if(count == 0){
-//                isEmpty = true;
-//            }
-//            else{
-//                isEmpty = false;
-//            }
-//        }
-//        catch let error as NSError {
-//            print("Could not fetch \(error), \(error.userInfo)")
-//        }
-//        return isEmpty
-//    }
+    
 }
 
 

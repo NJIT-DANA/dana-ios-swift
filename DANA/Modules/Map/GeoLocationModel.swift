@@ -11,10 +11,13 @@ struct LocationModel: Decodable {
   let zoom_level: Int
   let map_type: String
   let address: String
-  //let item: [String,AnyObject]
- let extended_resources: [String]
+  let item:item_Maps
 }
 
+struct item_Maps: Decodable {
+    let url: String
+    let id: Int
+}
 
 //struct itemVal: Decodable {
 //  let id: Int

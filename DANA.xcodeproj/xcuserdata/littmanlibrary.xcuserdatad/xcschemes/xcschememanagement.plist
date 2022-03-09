@@ -7,7 +7,25 @@
 		<key>DANA.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>59A3B44927AEDAFC00C751C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59A3B46227AEDAFE00C751C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59A3B46C27AEDAFE00C751C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
