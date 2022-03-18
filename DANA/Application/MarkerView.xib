@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="MapMarkerWindowView" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="mapMarkerWindowView" customModule="DANA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="229"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i21-yN-UD9">
+                    <rect key="frame" x="0.0" y="37" width="350" height="192"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDt-FN-zOa">
+                            <rect key="frame" x="10" y="63" width="330" height="18"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-Vk-1OQ">
+                            <rect key="frame" x="10" y="101" width="330" height="76"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-ht-ANZ">
+                            <rect key="frame" x="12" y="25" width="330" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="7zR-Vb-nJr"/>
+                                <constraint firstAttribute="width" constant="330" id="UV3-a5-Jmr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <color key="tintColor" systemColor="systemBlueColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="o1q-ht-ANZ" secondAttribute="trailing" constant="8" id="0Yr-6E-qdX"/>
+                        <constraint firstItem="NDt-FN-zOa" firstAttribute="top" secondItem="o1q-ht-ANZ" secondAttribute="bottom" constant="10" id="1gA-NF-Upo"/>
+                        <constraint firstAttribute="trailing" secondItem="NDt-FN-zOa" secondAttribute="trailing" constant="10" id="6Ia-rM-2tK"/>
+                        <constraint firstItem="2eg-Vk-1OQ" firstAttribute="top" secondItem="NDt-FN-zOa" secondAttribute="bottom" constant="20" id="9qx-T3-il5"/>
+                        <constraint firstItem="o1q-ht-ANZ" firstAttribute="leading" secondItem="i21-yN-UD9" secondAttribute="leading" constant="12" id="Ds3-2S-zSt"/>
+                        <constraint firstAttribute="bottom" secondItem="2eg-Vk-1OQ" secondAttribute="bottom" constant="15" id="d7m-kT-9PP"/>
+                        <constraint firstItem="NDt-FN-zOa" firstAttribute="leading" secondItem="i21-yN-UD9" secondAttribute="leading" constant="10" id="g8c-e1-hsO"/>
+                        <constraint firstAttribute="trailing" secondItem="2eg-Vk-1OQ" secondAttribute="trailing" constant="10" id="nRY-VB-4nl"/>
+                        <constraint firstItem="o1q-ht-ANZ" firstAttribute="top" secondItem="i21-yN-UD9" secondAttribute="top" constant="25" id="nhn-A3-nzO"/>
+                        <constraint firstItem="2eg-Vk-1OQ" firstAttribute="leading" secondItem="i21-yN-UD9" secondAttribute="leading" constant="10" id="tHN-VF-wmA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-B7-wjE">
+                    <rect key="frame" x="306" y="0.0" width="44" height="30.666666666666668"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30.666666666666668" id="Vcd-Wz-Dw1"/>
+                        <constraint firstAttribute="width" constant="44" id="ndJ-fN-687"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=" " image="xmark.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="closeView:" destination="iN0-l3-epB" eventType="touchUpInside" id="b22-vW-0Ci"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="C4s-B7-wjE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1v4-bm-KGh"/>
+                <constraint firstAttribute="bottom" secondItem="i21-yN-UD9" secondAttribute="bottom" id="g9y-FG-LaQ"/>
+                <constraint firstItem="i21-yN-UD9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="la5-sm-haD"/>
+                <constraint firstItem="i21-yN-UD9" firstAttribute="trailing" secondItem="C4s-B7-wjE" secondAttribute="trailing" id="n1N-g1-6n7"/>
+                <constraint firstAttribute="trailing" secondItem="C4s-B7-wjE" secondAttribute="trailing" id="yB8-4D-w3V"/>
+                <constraint firstItem="i21-yN-UD9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yTH-qu-g1W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                    <size key="value" width="0.0" height="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                    <integer key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="descriptionLabel" destination="NDt-FN-zOa" id="CpD-4X-6uG"/>
+                <outlet property="detailLabel" destination="2eg-Vk-1OQ" id="F4z-8o-Tze"/>
+                <outlet property="titleButton" destination="o1q-ht-ANZ" id="PIv-lV-B1m"/>
+            </connections>
+            <point key="canvasLocation" x="278.26086956521743" y="-175.78125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

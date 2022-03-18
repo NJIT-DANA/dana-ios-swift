@@ -20,9 +20,8 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
     @IBOutlet weak var architectsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        architectsTableView.separatorStyle = .none
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData(notification:)), name: .reloadArchitects, object: nil)
-     
-      //  NotificationCenter.default.addObserver(self, selector: #selector(reloadData(notification:)), name: Notification.Name.NSManagedObjectContextDidSave, object: nil)
        
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
@@ -31,9 +30,12 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
         if !danaHelper.checkifEntityisEmpty(entity: textConstants.architectEntity){
             self.architectArrayfromDB = architectViewModel.fetchallArchitectsfromDB()
         }else{
-            
+            if danaHelper.checkNetworkConnection(){
+                
                 let indicatorView = danaHelper.activityIndicator(style: .large,
                                                                          center: self.view.center)
+                indicatorView.style = UIActivityIndicatorView.Style.large
+                indicatorView.color = .red
                         DispatchQueue.main.async {
                             self.view.addSubview(indicatorView)
                             indicatorView.startAnimating()
@@ -48,11 +50,24 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
                         print("cooooolll")
                     }
                 }
+                //delay and call
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                    self.architectsTableView.reloadData()
+                }
             }
-        //delay and call
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            self.architectsTableView.reloadData()
+            else{
+                func danaNetworkAlert(){
+                   // Create new Alert
+                    let dialogMessage = UIAlertController(title: "No Internet Connection", message: textConstants.danaNetworkMessage, preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                        print("Ok button tapped")
+                     })
+                    dialogMessage.addAction(ok)
+                    self.present(dialogMessage, animated: true, completion: nil)
+               }
+            }
         }
+         
     }
     
     //MARK:- architect Methods
@@ -82,7 +97,9 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
     }
     func setUI() {
         self.navigationItem.title = textConstants.architectViewTitle
-        self.navigationController?.navigationBar.backgroundColor = UIColor.black
+    }
+    @IBAction func hamburgerAction(_ sender: Any) {
+        HamburgerMenu().triggerSideMenu()
     }
     
     // MARK: - Table view data source
@@ -96,6 +113,7 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell:DANACustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: textConstants.architectCell, for: indexPath) as! DANACustomTableViewCell
         let architect = architectArrayfromDB[indexPath.row] as Architects_Firms
         cell.pictureView.image = UIImage(named: textConstants.placeholderImage)
@@ -105,11 +123,42 @@ class ArchitectsFirmsViewController: UIViewController,UITableViewDelegate,UITabl
             //             cell.pictureView.af_setImage(withURL: imageUrl!, cacheKey: "", placeholderImage: .none, serializer: .none, filter: .none, progress: .none, progressQueue: .global(), imageTransition: .noTransition, runImageTransitionIfCached: false) {  (response) -> Void in
             //                 print("image: \(cell.pictureView.image)")
         }
-        cell.titleLabel.text = architect.name
+        cell.selectionStyle = .none
+        cell.titleLabel.text = architect.title
+        if let subject = architect.subject{
+            cell.subLabel.text = subject.capitalized
+        }
+        else{
+            cell.subLabel.text = architect.occupation?.capitalized
+        }
+        
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier:"DetailsVC" ) as! DetailViewController
+            nextViewController.architect = architectArrayfromDB[indexPath.row]
+            nextViewController.type = textConstants.architectViewTitle
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+}
+extension ArchitectsFirmsViewController{
+    func danaNetworkAlert(){
+       // Create new Alert
+        let dialogMessage = UIAlertController(title: "No Internet Connection", message: textConstants.danaNetworkMessage, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        dialogMessage.addAction(ok)
+        self.present(dialogMessage, animated: true, completion: nil)
+   }
 }
 extension Notification.Name {
      static let reloadArchitects = Notification.Name("reload")
 }
-
+extension ArchitectsFirmsViewController{
+    @objc func hideHamburger(){
+        HamburgerMenu().closeSideMenu()
+    }
+}

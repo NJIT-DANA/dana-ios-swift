@@ -19,7 +19,7 @@ class BuildingsViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        buildingTableView.separatorStyle = .none
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
         
@@ -28,27 +28,36 @@ class BuildingsViewController: UIViewController,UITableViewDelegate,UITableViewD
         if !danaHelper.checkifEntityisEmpty(entity: textConstants.buildingEntity){
             self.buildingArrayfromDB = buildingViewModel.fetchallBuildingsfromDB()
         }else{
-            let indicatorView = danaHelper.activityIndicator(style: .large,
-                                                                     center: self.view.center)
+            
+            if danaHelper.checkNetworkConnection(){
+                let indicatorView = danaHelper.activityIndicator(style: .large,
+                                                                         center: self.view.center)
+                indicatorView.style = UIActivityIndicatorView.Style.large
+                indicatorView.color = .red
+                        DispatchQueue.main.async {
+                            self.view.addSubview(indicatorView)
+                            indicatorView.startAnimating()
+                        }
+                self.fetchBuildingsfromAPI {
                     DispatchQueue.main.async {
-                        self.view.addSubview(indicatorView)
-                        indicatorView.startAnimating()
+                        indicatorView.stopAnimating()
+                        self.buildingArrayfromDB = self.buildingViewModel.fetchallBuildingsfromDB()
+                        self.buildingTableView.reloadData()
                     }
-            self.fetchBuildingsfromAPI {
-                DispatchQueue.main.async {
-                    indicatorView.stopAnimating()
-                    self.buildingArrayfromDB = self.buildingViewModel.fetchallBuildingsfromDB()
+                    self.fetchImagesofSpaces {
+                    }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
                     self.buildingTableView.reloadData()
                 }
-                self.fetchImagesofSpaces {
-                }
             }
-        }
-        
-        //delay and call
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            self.buildingTableView.reloadData()
-        }
+            else{
+                self.danaNetworkAlert()
+            }
+            //delay and call
+            
+            }
+            
     }
     
     func fetchBuildingsfromAPI(completionHandler: @escaping () -> (Void)) {
@@ -74,7 +83,10 @@ class BuildingsViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func setUI() {
         self.navigationItem.title = textConstants.buildingsTitle
-        self.navigationController?.navigationBar.backgroundColor = UIColor.black
+       
+    }
+    @IBAction func hamburgerAction(_ sender: Any) {
+        HamburgerMenu().triggerSideMenu()
     }
     
     // MARK: - Table view data source
@@ -88,6 +100,7 @@ class BuildingsViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         let cell:DANACustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: textConstants.buildingCell, for: indexPath) as! DANACustomTableViewCell
         let building = buildingArrayfromDB[indexPath.row] as Buildings
         cell.pictureView.image = UIImage(named: textConstants.placeholderImage)
@@ -96,8 +109,38 @@ class BuildingsViewController: UIViewController,UITableViewDelegate,UITableViewD
             cell.pictureView.af.setImage(withURL: imageUrl!)
         }
         cell.titleLabel.text = building.name
+        if let subject = building.subject {
+            cell.subLabel.text = subject.capitalized
+        }else{
+            cell.subLabel.text = "Building"
+        }
+        cell.selectionStyle = .none
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier:"DetailsVC" ) as! DetailViewController
+            nextViewController.building = buildingArrayfromDB[indexPath.row]
+            nextViewController.type = textConstants.buildingsTitle
+            self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
  
+}
+extension BuildingsViewController{
+    func danaNetworkAlert(){
+       // Create new Alert
+        let dialogMessage = UIAlertController(title: "No Internet Connection", message: textConstants.danaNetworkMessage, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        dialogMessage.addAction(ok)
+        self.present(dialogMessage, animated: true, completion: nil)
+   }
+}
+extension BuildingsViewController{
+    @objc func hideHamburger(){
+        HamburgerMenu().closeSideMenu()
+    }
 }

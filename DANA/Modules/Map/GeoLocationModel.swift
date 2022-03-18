@@ -19,6 +19,15 @@ struct item_Maps: Decodable {
     let id: Int
 }
 
+struct Element_texts_maps: Decodable {
+    let text: String
+    let element: Element_type
+}
+
+struct Element_type_map: Decodable {
+    let name: String
+}
+
 //struct itemVal: Decodable {
 //  let id: Int
 //  let url: String

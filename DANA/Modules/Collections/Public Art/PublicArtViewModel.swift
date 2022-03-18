@@ -93,10 +93,12 @@ class PublicArtViewModel: ObservableObject {
     func updateImageData(context: NSManagedObjectContext){
         let artsfromDB = fetchallPublicArtsfromDB()
         artsfromDB.forEach{(dataArt) in
-            imageUrlArray.forEach{(dataImg) in
-                if dataArt.id == dataImg.item.id{
-                    dataArt.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
-                }
+            if imageUrlArray.count > 0{
+                let dataImg = imageUrlArray.first
+                if dataArt.id == dataImg!.item.id{
+                    dataArt.setValue(dataImg!.file_urls.thumbnail, forKey: "imageUrl")
+                   
+                                }
             }
         }
         do{

@@ -99,11 +99,13 @@ class ArchitectsViewModel: ObservableObject {
     func updateImageData(context: NSManagedObjectContext){
         let architectsfromDB = fetchallArchitectsfromDB()
         architectsfromDB.forEach{(dataArch) in
-            imageUrlArray.forEach{(dataImg) in
-                if dataArch.id == dataImg.item.id{
-                    dataArch.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
-                }
+            if imageUrlArray.count > 0{
+                let dataImg = imageUrlArray.first
+                if dataArch.id == dataImg!.item.id{
+                    dataArch.setValue(dataImg!.file_urls.thumbnail, forKey: "imageUrl")
+                                }
             }
+
         }
         do{
             try context.save()
