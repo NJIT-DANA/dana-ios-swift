@@ -92,11 +92,14 @@ func makeFetchBuildingsApiCall(context: NSManagedObjectContext,completionHandler
     func updateImageData(context: NSManagedObjectContext){
         let buildingfromDB = fetchallBuildingsfromDB()
         buildingfromDB.forEach{(dataBuild) in
-            imageUrlArray.forEach{(dataImg) in
-                if dataBuild.id == dataImg.item.id{
-                    dataBuild.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
-                }
+            
+            if imageUrlArray.count > 0{
+                let dataImg = imageUrlArray.first
+                if dataBuild.id == dataImg!.item.id{
+                    dataBuild.setValue(dataImg!.file_urls.thumbnail, forKey: "imageUrl")
+                                }
             }
+            
         }
         do{
             try context.save()

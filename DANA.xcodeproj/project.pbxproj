@@ -8,7 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		23FB0CB3F52786E2B9EF385E /* Pods_DANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F7121EDE58B3947C65E71D /* Pods_DANA.framework */; };
+		5914F03727DB27CD006FBE9B /* MarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5914F03627DB27CD006FBE9B /* MarkerView.xib */; };
+		5914F03927DB2827006FBE9B /* mapMarkerWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F03827DB2827006FBE9B /* mapMarkerWindowView.swift */; };
+		5914F03B27E04958006FBE9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F03A27E04958006FBE9B /* DetailViewController.swift */; };
+		5914F03D27E05619006FBE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F03C27E05619006FBE9B /* ViewController.swift */; };
+		5914F04127E057B4006FBE9B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04027E057B4006FBE9B /* AboutViewController.swift */; };
+		5914F04427E08EE7006FBE9B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04327E08EE7006FBE9B /* SettingsTableViewCell.swift */; };
+		5914F04627E138B1006FBE9B /* DANADetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04527E138B1006FBE9B /* DANADetailTableViewCell.swift */; };
+		5914F04827E1CCED006FBE9B /* DanaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04727E1CCED006FBE9B /* DanaListTableViewCell.swift */; };
+		5914F04A27E2B3D2006FBE9B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04927E2B3D2006FBE9B /* ARViewController.swift */; };
+		5914F04C27E30FBA006FBE9B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5914F04B27E30FBA006FBE9B /* SettingsViewController.swift */; };
 		591CCA1127C6A92400CCDE63 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CCA1027C6A92400CCDE63 /* GMSMapViewController.swift */; };
+		595F1CD227D85EE400B7285C /* DANAHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F1CD127D85EE400B7285C /* DANAHomeTableViewCell.swift */; };
 		596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */; };
 		596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5927B75D8900CBFB64 /* AppDelegate.swift */; };
 		596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */; };
@@ -62,7 +73,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5914F03627DB27CD006FBE9B /* MarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerView.xib; sourceTree = "<group>"; };
+		5914F03827DB2827006FBE9B /* mapMarkerWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapMarkerWindowView.swift; sourceTree = "<group>"; };
+		5914F03A27E04958006FBE9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5914F03C27E05619006FBE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5914F04027E057B4006FBE9B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5914F04327E08EE7006FBE9B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		5914F04527E138B1006FBE9B /* DANADetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANADetailTableViewCell.swift; sourceTree = "<group>"; };
+		5914F04727E1CCED006FBE9B /* DanaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanaListTableViewCell.swift; sourceTree = "<group>"; };
+		5914F04927E2B3D2006FBE9B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		5914F04B27E30FBA006FBE9B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		591CCA1027C6A92400CCDE63 /* GMSMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSMapViewController.swift; sourceTree = "<group>"; };
+		595F1CD127D85EE400B7285C /* DANAHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANAHomeTableViewCell.swift; sourceTree = "<group>"; };
 		596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DANACustomTableViewCell.swift; sourceTree = "<group>"; };
 		596F5C5927B75D8900CBFB64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DANA/Main/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = DANA/Main/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -141,6 +163,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5914F04227E08EC5006FBE9B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5914F04027E057B4006FBE9B /* AboutViewController.swift */,
+				5914F04B27E30FBA006FBE9B /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		596F5C4527B7481200CBFB64 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +243,7 @@
 				596F5C5A27B75D8900CBFB64 /* SceneDelegate.swift */,
 				59A3B45B27AEDAFE00C751C5 /* LaunchScreen.storyboard */,
 				59A3B45327AEDAFC00C751C5 /* Main.storyboard */,
+				5914F03627DB27CD006FBE9B /* MarkerView.xib */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -219,6 +251,7 @@
 		596F5C4E27B7495200CBFB64 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				59760B7827E311CD0060E470 /* Controllers */,
 				596F5C5427B74B8D00CBFB64 /* Constants */,
 				596F5C5327B74B0C00CBFB64 /* CustomCells */,
 				59A3B48627AEE50C00C751C5 /* StoryBoards */,
@@ -250,6 +283,7 @@
 		596F5C5227B74A7500CBFB64 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				5914F04927E2B3D2006FBE9B /* ARViewController.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -258,6 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				596F5C3F27B249EA00CBFB64 /* DANACustomTableViewCell.swift */,
+				5914F04527E138B1006FBE9B /* DANADetailTableViewCell.swift */,
+				595F1CD127D85EE400B7285C /* DANAHomeTableViewCell.swift */,
+				5914F03827DB2827006FBE9B /* mapMarkerWindowView.swift */,
+				5914F04327E08EE7006FBE9B /* SettingsTableViewCell.swift */,
+				5914F04727E1CCED006FBE9B /* DanaListTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -275,6 +314,15 @@
 			children = (
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		59760B7827E311CD0060E470 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5914F03A27E04958006FBE9B /* DetailViewController.swift */,
+				5914F03C27E05619006FBE9B /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		59A3B44127AEDAFC00C751C5 = {
@@ -302,6 +350,7 @@
 		59A3B44C27AEDAFC00C751C5 /* DANA */ = {
 			isa = PBXGroup;
 			children = (
+				5914F04227E08EC5006FBE9B /* Settings */,
 				596F5C5527B756C100CBFB64 /* Main */,
 				596F5C5027B7498100CBFB64 /* Utils */,
 				596F5C4E27B7495200CBFB64 /* Common */,
@@ -470,6 +519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5914F03727DB27CD006FBE9B /* MarkerView.xib in Resources */,
 				59A3B45D27AEDAFE00C751C5 /* LaunchScreen.storyboard in Resources */,
 				59A3B45A27AEDAFE00C751C5 /* Assets.xcassets in Resources */,
 				59A3B45527AEDAFC00C751C5 /* Main.storyboard in Resources */,
@@ -559,28 +609,38 @@
 				591CCA1127C6A92400CCDE63 /* GMSMapViewController.swift in Sources */,
 				59A3B48D27AF0A7D00C751C5 /* NetworkManager.swift in Sources */,
 				59A3B45827AEDAFC00C751C5 /* DANA.xcdatamodeld in Sources */,
+				5914F04A27E2B3D2006FBE9B /* ARViewController.swift in Sources */,
 				596F5C5B27B75D8900CBFB64 /* AppDelegate.swift in Sources */,
 				59A3B4D327B00EEC00C751C5 /* BuildingModel.swift in Sources */,
 				59A3B4E127B0F60F00C751C5 /* CollectionViewController.swift in Sources */,
 				59A3B4D927B032F200C751C5 /* PublicArtModel.swift in Sources */,
+				5914F04827E1CCED006FBE9B /* DanaListTableViewCell.swift in Sources */,
 				596F5C6627B877F600CBFB64 /* PublicSpaceViewModel.swift in Sources */,
 				59EA8BEA27C4BBF800E042E1 /* PublicArtViewController.swift in Sources */,
+				5914F03D27E05619006FBE9B /* ViewController.swift in Sources */,
 				59A3B49627AF256C00C751C5 /* DanaHelper.swift in Sources */,
 				596F5C6A27C15FC600CBFB64 /* BuildingsViewController.swift in Sources */,
 				59A3B4EF27B231B600C751C5 /* ArchitectsFirmsViewController.swift in Sources */,
 				596F5C6027B7854A00CBFB64 /* GeoLocationViewModel.swift in Sources */,
+				5914F03927DB2827006FBE9B /* mapMarkerWindowView.swift in Sources */,
 				59A3B4D527B00F0300C751C5 /* PublicSpaceModel.swift in Sources */,
 				59A3B4D727B00F7100C751C5 /* ArchitectsModel.swift in Sources */,
 				59A3B4E627B1957600C751C5 /* ImageModel.swift in Sources */,
+				5914F04627E138B1006FBE9B /* DANADetailTableViewCell.swift in Sources */,
 				59A3B4E427B1912600C751C5 /* ArchitectsViewModel.swift in Sources */,
 				59A3B48F27AF122C00C751C5 /* GeoLocationModel.swift in Sources */,
+				595F1CD227D85EE400B7285C /* DANAHomeTableViewCell.swift in Sources */,
 				59EA8BE827C4BBE500E042E1 /* PublicArtViewModel.swift in Sources */,
+				5914F04C27E30FBA006FBE9B /* SettingsViewController.swift in Sources */,
 				596F5C5C27B75D8900CBFB64 /* SceneDelegate.swift in Sources */,
 				59A3B49427AF1E1B00C751C5 /* Reachability.swift in Sources */,
 				59A3B4E227B0F60F00C751C5 /* MapViewController.swift in Sources */,
 				596F5C6227B7955400CBFB64 /* LocationDetailsModel.swift in Sources */,
 				596F5C4027B249EA00CBFB64 /* DANACustomTableViewCell.swift in Sources */,
 				596F5C6427B8771800CBFB64 /* PublicSpacesViewController.swift in Sources */,
+				5914F04427E08EE7006FBE9B /* SettingsTableViewCell.swift in Sources */,
+				5914F04127E057B4006FBE9B /* AboutViewController.swift in Sources */,
+				5914F03B27E04958006FBE9B /* DetailViewController.swift in Sources */,
 				59A3B48B27AF01E700C751C5 /* AppConstants.swift in Sources */,
 				596F5C6827C15FB600CBFB64 /* BuildingsViewModel.swift in Sources */,
 			);
@@ -760,6 +820,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7P2KFTR3WV;
@@ -773,6 +834,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -781,6 +843,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dana.DANA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -793,6 +856,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7P2KFTR3WV;
@@ -806,6 +870,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,6 +879,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dana.DANA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

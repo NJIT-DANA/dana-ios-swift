@@ -94,10 +94,12 @@ class PublicSpaceViewModel: ObservableObject {
     func updateImageData(context: NSManagedObjectContext){
         let spacesfromDB = fetchallPublicSpacesfromDB()
         spacesfromDB.forEach{(dataSpace) in
-            imageUrlArray.forEach{(dataImg) in
-                if dataSpace.id == dataImg.item.id{
-                    dataSpace.setValue(dataImg.file_urls.square_thumbnail, forKey: "imageUrl")
-                }
+            if imageUrlArray.count > 0{
+                let dataImg = imageUrlArray.first
+                if dataSpace.id == dataImg!.item.id{
+                    dataSpace.setValue(dataImg!.file_urls.thumbnail, forKey: "imageUrl")
+                
+                                }
             }
         }
         do{
@@ -118,6 +120,7 @@ class PublicSpaceViewModel: ObservableObject {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchedSpaces = NSFetchRequest<NSFetchRequestResult>(entityName: textConstants.spaceEntity)
+      
         do {
             let fetchedSpaces = try context.fetch(fetchedSpaces) as! [PublicSpaces]
             print(fetchedSpaces.count)

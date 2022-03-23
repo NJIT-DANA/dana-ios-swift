@@ -11,6 +11,7 @@ import CoreData
 
 class GeoLocationViewModel:ObservableObject{
     var maps : [LocationModel] = []
+    var imageUrlArray : [ImageModel] = []
   
    // var imageUrlArray : [ImageModel] = []
     let currentNetworkmanager = networkManager()
@@ -47,6 +48,23 @@ class GeoLocationViewModel:ObservableObject{
             completionHandler()
         }
     }
+    
+    func makeFetchimagesApiCall(context: NSManagedObjectContext,fileUrl:String,completionHandler: @escaping (_ imgArray: Array<ImageModel>) -> (Void)){
+       
+                currentNetworkmanager.fetchImagefromDANA(fileUrl) { imageurlsArray in
+                    let urlArrayforDB = imageurlsArray;
+                    DispatchQueue.main.async {
+                    self.imageUrlArray = urlArrayforDB
+                       
+                    }
+                    completionHandler(imageurlsArray)
+                }
+        
+         
+       // NotificationCenter.default.post(name: .reloadArchitects, object: nil)
+    }
+    
+    
     //saving data to core data
     func saveData(context: NSManagedObjectContext,completionHandler: @escaping () -> (Void)){
         maps.forEach{(data) in
@@ -74,7 +92,27 @@ class GeoLocationViewModel:ObservableObject{
         locnsfromDB.forEach{(dataLocn) in
             
                 if dataLocn.itemId == item.id{
-                   dataLocn.setValue(item.element_texts[0].text, forKey: "title")
+                    dataLocn.fileurl = item.files.url
+                    
+                    for value in item.element_texts{
+                        switch value.element.name {
+                        case "Title":
+                            dataLocn.title = value.text
+                        case "Description":
+                            dataLocn.mapdescription = value.text
+                        case "State":
+                            dataLocn.state = value.text
+                        case "Condition History":
+                            dataLocn.conditionhistory = value.text
+                        case "Bibliography":
+                            dataLocn.bibliography = value.text
+                        case "Style":
+                            dataLocn.style = value.text
+                        default:
+                            print("Enjoy your day!")
+                        }
+                    }
+
                 }
             
         }
@@ -88,10 +126,11 @@ class GeoLocationViewModel:ObservableObject{
     }
     
     //fetch all from DB
-    func fetchallLocationsfromDB()-> Array<GeoLocations>{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    func fetchallLocationsfromDB()-> Array<GeoLocations>{        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchedLocations = NSFetchRequest<NSFetchRequestResult>(entityName: textConstants.locationEntity)
+        let sortdescriptor = NSSortDescriptor(keyPath: \GeoLocations.title, ascending: true)
+        fetchedLocations.sortDescriptors = [sortdescriptor]
         do {
             let fetchedLocations = try context.fetch(fetchedLocations) as! [GeoLocations]
             print(fetchedLocations.count)
